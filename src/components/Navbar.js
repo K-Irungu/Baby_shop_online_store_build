@@ -17,7 +17,9 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-import Button from '@mui/material/Button';
+import Tabs from './Tabs'
+
+
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -160,8 +162,9 @@ export default function Navbar() {
   );
 
   return (
+
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="absolute" sx={{ backgroundColor: "#113F62" }}>
+      <AppBar position="absolute" sx={{ backgroundColor: "#113F62", p: 1, display: "flex", flexDirection: "column" }}>
         <Toolbar >
 
           <Typography
@@ -238,9 +241,18 @@ export default function Navbar() {
 
 
         </Toolbar>
+{/* 
+        <Toolbar >
+          <Tabs />
+        </Toolbar> */}
+        
       </AppBar>
+
       {renderMobileMenu}
       {renderMenu}
     </Box>
+
+
+
   );
 }
